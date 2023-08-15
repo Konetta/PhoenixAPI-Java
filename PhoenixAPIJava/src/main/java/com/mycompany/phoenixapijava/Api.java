@@ -313,7 +313,6 @@ public class Api {
         data.put("type", Type.query_map_entities.ordinal());
 
         String json_data = new Gson().toJson(data);
-        System.out.println(json_data);
         return sendData(json_data) == json_data.length() + 1;
     }
 
