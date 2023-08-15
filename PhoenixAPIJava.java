@@ -6,7 +6,7 @@ import java.io.IOException;
 
 /**
  *
- * @author srkir
+ * @author Koretta
  */
 public class PhoenixAPIJava {
 
