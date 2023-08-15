@@ -13,18 +13,16 @@ public class PhoenixAPIJava {
     public static void main(String[] args) {
         // Put the port from the bot title, it should look something like
         // [Lv 99.(+80) CharacterName] - Phoenix Bot: 123123
-        int port = 61258;
+        // This is an example of how to log packets on console.
+        int port = 123123;
 
         try {
             Api api = new Api(port);
             while (api.isWorking()) {
                 if (!api.isEmpty()) {
                     String msg = api.getMessage();
-                    
                     JsonObject jsonMsg = new Gson().fromJson(msg, JsonObject.class);
-
                     int messageType = jsonMsg.get("type").getAsInt();
-
                     if (messageType == Api.Type.packet_send.ordinal()) {
                         System.out.println("[SEND]: " + jsonMsg.get("packet").getAsString());
                     } else if (messageType == Api.Type.packet_recv.ordinal()) {
