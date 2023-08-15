@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  *
- * @author srkir
+ * @author Koretta
  */
 public class Api {
 
